@@ -1,0 +1,105 @@
+<div class="container-fluid">
+    <div class="animated fadeIn">
+      <div class="row">
+      </div>
+      <br/>
+      <div class="row">
+          <div class="col-sm-6 col-lg-6">
+              <app-profile [user]="currentUser"></app-profile>
+          </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                  <div class="h1 text-muted text-right mb-4">
+                    <i class="icon-people"></i>
+                  </div>
+                  <div class="text-value">250</div>
+                  <small class="text-muted text-uppercase font-weight-bold">Score</small>
+                  <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+                      <canvas baseChart class="chart"
+                      [datasets]="lineChart1Data"
+                      [labels]="lineChart1Labels"
+                      [options]="lineChart1Options"
+                      [colors]="lineChart1Colours"
+                      [legend]="lineChart1Legend"
+                      [chartType]="lineChart1Type"></canvas>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                      Self Eval
+                      <div class="card-header-actions">
+                        <a href="http://www.chartjs.org">
+                          <small class="text-muted">docs</small>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="chart-wrapper">
+                        <canvas baseChart class="chart"
+                        [datasets]="lineChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"></canvas>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+             <div class="col-sm-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                      <i class="fa fa-align-justify"></i> Activities
+                    </div>
+                    <div class="card-body">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Date </th>
+                            <th>Activity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let activity of activityData">
+                              <td>{{activity.date}}</td>
+                              <td>{{activity.activity}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+             <div class="col-sm-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        Engagement Trend
+                        <div class="card-header-actions">
+                          <a href="http://www.chartjs.org">
+                            <small class="text-muted">docs</small>
+                          </a>
+                        </div>
+                      </div>
+                    <div class="card-body">
+                      <div class="chart-wrapper">
+                        <canvas baseChart class="chart"
+                        [datasets]="lineChart2Data"
+                        [labels]="lineChart2Labels"
+                        [options]="lineChart2Options"
+                        [legend]="lineChart2Legend"
+                        [chartType]="lineChart2Type"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+             </div>
+        </div>
+     </div>
+</div>
+<!-- [colors]="lineChartColours" -->

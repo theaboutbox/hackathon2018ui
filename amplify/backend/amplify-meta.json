@@ -1,0 +1,32 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "gwportal-20181127141954-authRole",
+			"UnauthRoleArn": "arn:aws:iam::851824999025:role/gwportal-20181127141954-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::851824999025:role/gwportal-20181127141954-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "gwportal-20181127141954-deployment",
+			"UnauthRoleName": "gwportal-20181127141954-unauthRole",
+			"StackName": "gwportal-20181127141954",
+			"StackId": "arn:aws:cloudformation:us-west-2:851824999025:stack/gwportal-20181127141954/913affb0-f292-11e8-839d-0ae8883d40a4"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/gwportal-20181127141954-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2018-11-27T22:26:16.112Z",
+			"output": {
+				"S3BucketSecureURL": "https://gwportal-20181127142349--hostingbucket.s3.amazonaws.com",
+				"WebsiteURL": "http://gwportal-20181127142349--hostingbucket.s3-website-us-west-2.amazonaws.com",
+				"Region": "us-west-2",
+				"HostingBucketName": "gwportal-20181127142349--hostingbucket"
+			},
+			"lastPushDirHash": "y0/c60Q5UER82gxn+tonhmXYPdQ="
+		}
+	}
+}
